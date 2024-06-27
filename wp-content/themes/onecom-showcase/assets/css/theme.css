@@ -1,0 +1,107 @@
+/* Theme Typography */
+
+body {
+    font-size: 14px;
+    color: #313131;
+    font-family: arial;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    font-family: 'Roboto Slab', serif;
+}
+
+
+/* Theme Colors */
+.oct-underlined-heading {
+    border-bottom: 2px solid #5a9e25;
+}
+a:hover,
+.section-content a:hover,
+.featured-box a:hover,
+.oct-main-content a:hover,
+.widget a:hover,
+.oct-post-meta a:hover,
+.widget-area a:hover,
+.widget-area h2 a:hover,
+.card-body h2 a:hover{
+    color: #5a9e25;
+}
+
+.single .oct-post-content a,
+.single .oct-post-content a:visited,
+.page .oct-post-content a,
+.page .oct-post-content a:visited {
+    color: #5a9e25;
+}
+
+.single
+.oct-post-content a:hover,
+.page .oct-post-content a:hover {
+    
+}
+
+#primary-nav ul li.current_page_item>a,
+#primary-nav ul li.current-menu-parent>a,
+#primary-nav ul li.current-menu-item>a,
+#primary-nav ul li:hover > a {
+    color: #333333;
+    background: #efefef;
+}
+
+#primary-nav ul li ul li.current_page_item a,
+#primary-nav ul li ul li:hover > a{
+    color: #333333;
+    background: #efefef;
+}
+
+#primary-nav ul li:hover > ul,
+#primary-nav ul li ul:hover{
+    display: block;
+    color: #333333;
+    background: #efefef;
+}
+
+.btn-primary,
+.btn-primary:visited,
+.btn-primary:focus {
+    border:none;
+    box-shadow:none;
+    color: #efefef;
+    background-color: #5a9e25;
+}
+
+.btn-primary:hover {
+    color: #efefef;
+    background-color: #ef8181;
+    border:none;
+    box-shadow:none;
+}
+
+.oct-main-content .comment-form input[type="button"],
+.oct-main-content .comment-form input[type="submit"] {
+    border: none;
+}
+
+/** Block related fixes **/
+.single .oct-post-content a.wp-block-button__link,
+.wp-block-button__link{
+    background-color: #5a9e25;
+    color: #efefef;
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 1.5;
+    padding: 6px 12px;
+}
+.single .oct-post-content .wp-block-button.is-style-outline a.wp-block-button__link,
+.wp-block-button__link{
+    color: #5a9e25;
+    background-color: #efefef;
+}
+.wp-block-button__link:hover{
+    opacity: 0.8;
+}
+/** Block related fixes end **/

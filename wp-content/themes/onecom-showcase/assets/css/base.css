@@ -1,0 +1,1293 @@
+/*!
+ * Base Style for Theme - This contains the main CSS for theme.
+ */
+
+/*!
+ * ############# Global CSS #############
+ */
+.container {
+    display: block;
+    margin: 0 auto;
+    width: 1280px;
+    max-width: 100%;
+}
+@media (min-width: 1200px) {
+    .container {
+        /* max-width: 1140px; */
+    }
+}
+body {
+    font-size: 14px;
+    color: #313131;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/*!
+ * ############# Typography Default #############
+ */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    font-weight:600;
+    font-style: normal;
+}
+h1{
+    font-size: 26px;
+}
+h2{
+    font-size: 22px;
+}
+h3{
+    font-size: 20px;
+}
+h4{
+    font-size: 18px;
+}
+h5{
+    font-size: 16px;
+}
+h6{
+    font-size: 14px;
+}
+
+/*!
+ * ############# Colors Default #############
+ */
+a,
+a:hover,
+a:active,
+a:visited,
+a:focus,
+input,
+input:hover,
+input:active,
+input:visited,
+input:focus,
+textarea,
+textarea:hover,
+textarea:focus{
+    text-decoration: none;
+    outline:none;
+}
+a, a:active, a:focus, a:visited {
+    color: #5a9e25;
+}
+a:hover,
+.section-content a:hover,
+.featured-box a:hover,
+.oct-main-content a:hover,
+.widget a:hover,
+.oct-post-meta a:hover,
+.widget-area a:hover,
+.widget-area h2 a:hover,
+.card-body h2 a:hover{
+    color: #00a3ac;
+    transition: color 0.3s;
+    -webkit-transition: color 0.3s;
+    -moz-transition: color 0.3s;
+}
+/*!
+ * ############# Basic Theme defaults & Resetting #############
+ */
+*{
+    margin:0;
+    padding:0;
+}
+u, ins {
+    text-decoration: underline;
+}
+figure {
+    margin: 0px;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+/*.btn {
+    right: 0;
+    top: 5px;
+    border-radius:1px;
+}*/
+article ol,
+article ul {
+    margin: .7em 0 .7em 1.143em;
+}
+.widget:after {
+    clear: both;
+    content:" ";
+    display:block;
+}
+ol.list-inline,
+ul.list-inline {
+    margin: 0;
+}
+.oct-card-text img.alignleft,
+.oct-main-content img.alignleft
+{
+    margin: 16px 16px 16px 0;
+}
+thead th {
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    color: #336B6B;
+    padding: 10px;
+    text-align: left;
+}
+tbody td {
+    border: 1px solid #ddd;
+    color: #333;
+    padding: 10px;
+    text-shadow: 1px 1px 1px #fff;
+}
+.screen-reader-text {
+    clip: rect(1px, 1px, 1px, 1px);
+    height: 1px;
+    overflow: hidden;
+    position: absolute !important;
+    width: 1px;
+    word-wrap: normal !important;
+}
+/* @todo enquee dashicon before base and remove important here */ 
+.dashicons, .dashicons-before:before {
+    display: inline-block !important;
+    line-height: initial !important;
+    vertical-align: text-top !important;
+    font-size: 18px !important;
+}
+
+/* ############# Global Content & Elements ############# */
+.oct-underlined-heading {
+    border-bottom: 3px solid rgb(255,196,74);
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    margin-top: 0px;
+}
+.oct-underlined-heading:after {
+    /* border-bottom: 2px solid rgb(255,196,74);
+    width: 150px;*/
+    display: block;
+    position: absolute;
+    content: '';
+    padding-bottom: 10px;
+}
+.single .oct-post-content {
+    margin-top: 20px;
+}
+
+/* #################### Buttons #################### */
+.btn {
+    border-radius: 1px;
+}
+.btn-primary {
+    color: #5a9e25;
+    background-color: #fff;
+    border: 1px solid #5a9e25;
+}
+.btn-primary:focus {
+    box-shadow: 0 0 0 1px #5a9e25;
+}
+.btn-primary:hover,
+.oct-main-content .btn-primary:hover
+{
+    background-color: #5a9e25;
+    color: #ffffff;
+    border: 1px solid #5a9e25;
+}
+/* 
+ * #################### Webshop ####################
+ * Tip: only handle a.button & button as .button will create issue with back link
+*/
+
+.onecom-webshop-main a.button,
+.onecom-webshop-main button,
+.onecom-webshop-main button:visited
+{
+    color: #5a9e25;
+    background-color: #fff;
+    border: 1px solid #5a9e25;
+    transition:0.3s;
+}
+
+.onecom-webshop-main a.button:hover,
+.onecom-webshop-main button:hover {
+    background-color: #5a9e25;
+    color: #ffffff;
+    fill: #ffffff;
+    border: 1px solid #5a9e25;
+}
+
+.onecom-webshop-main a.button:focus,
+.onecom-webshop-main a.button:active {
+    outline: none;
+    box-shadow: 0 0 0 1px #5a9e25;
+}
+
+/* ############# Main Section between header & footer ############# */
+.oct-main-section {
+    margin-top: 40px;
+}
+
+/* ############# Posts Content ############# */
+.oct-post-content {
+    margin-bottom:16px; 
+}
+.oct-post-title-small {
+    font-size: 12px;
+    font-weight: 600;
+}
+.oct-card {
+    margin-bottom: 40px;
+
+}
+.oct-card-text {
+    margin: 16px 0;
+}
+.oct-card-2 .oct-post-title-sm a {
+    color: #5a9e25;
+}
+.oct-card a {
+    text-decoration:none;
+    transition: 0.5s;
+}
+.post-edit-link:before {
+    content: "\f464";
+    font-family: dashicons;
+    -webkit-transition:all .25s ease;
+    -ms-transition:all .25s ease;
+    transition:all .25s ease;
+    font-size: 20px;
+    display: inline-block;
+    line-height: initial;
+    vertical-align: middle;
+}
+/* ############# Single post or page specific ############# */
+.oct-post-meta {
+    border-top: 1px solid #eeeeee;
+    border-bottom: 1px solid #eeeeee;
+    font-size: 13px;
+    font-style: italic;
+    padding: 8px 0;
+}
+.single .oct-post-content a,
+.single .oct-post-content a:visited,
+.page .oct-post-content a,
+.page .oct-post-content a:visited
+{
+    color: #00a3ac;
+}
+.single .oct-post-content a:hover,
+.page .oct-post-content a:hover
+{
+    text-decoration: underline;
+}
+.single .oct-main-content .oct-featured-media,
+.page .oct-main-content .oct-featured-media{
+    margin-bottom: 16px;
+}
+/* #################### Featured Media ####################*/
+.wp-video, .wp-video-shortcode {
+    max-width: 100% !important;
+    height: auto;
+    overflow: hidden;
+}
+.wp-video {
+    width: 100% !important;
+}
+.wp-video-shortcode {
+    overflow: hidden;
+}
+/* #################### Widgets - Sidebar #################### */
+.widget-sidebar {
+    background-color: #fff;
+    padding: 20px;
+}
+.widget-sidebar li {
+    list-style: bullet;
+    position: relative;
+    line-height: 20px;
+    margin: 5px 0;
+}
+.widget ul,
+.widget ol{
+    margin-left: 20px;
+}
+
+/* ############# Recent Posts Widget ############# */
+.oct-recent-posts {
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(0,0,0,.1);
+}
+.oct-recent-posts:last-child,
+.oct-recent-posts:first-child {
+    margin: 0;
+}
+.oct-recent-posts .post-date {
+    font-size: 12px;
+    vertical-align: middle;
+}
+.oct-recent-posts:last-child {
+    border: none;
+}
+.oct-recent-posts .dashicons, 
+.oct-recent-posts .dashicons-before:before {
+    /* @todo Remore !important in css file */
+    font-size: 14px !important;
+    line-height: 18px !important;
+    width: 14px;
+}
+
+/* Not used CSS - to be deleted */
+/*.content-widget-sidebar ul {
+    padding: 0px;
+}
+
+.recent-post{
+    width: 100%;
+    height: 70px;
+    list-style-type: none;
+}
+.post-img img {
+    width: 100px;
+    height: 70px;
+    float: left;
+    margin-right: 15px;
+     border: 4px solid #5a9e25;
+    
+    transition: 0.5s;
+}
+.recent-post a {
+    text-decoration: none;
+    color:#34495E;
+    transition: 0.5s;
+}
+.recent-post a:hover{
+    color:#5a9e25;
+}
+.recent-post h4 {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+footer .recent-post h4 {
+    color: #cccccc;
+} */
+
+/*.oct-card-2 {
+        font-size: 13px;
+}
+.about-widget .img-thumbnail {
+    border: none;
+    padding: none;
+}
+.category-widget li i {
+    padding-right: 10px;
+}
+.lightbox img {
+    height: 110px;
+    width: 110px;
+    max-width: 100%;
+}
+.gallery-page .lightbox img {
+    height: 210px;
+    width: 210px;
+    max-width: 100%;
+}*/
+
+/*.fba-links {
+    text-align: right;
+}
+.fba-links ul li a {
+    color: #e5e5e5;
+    display: block;
+    font-size: 14px;
+    letter-spacing: 0;
+}
+.fba-links ul {
+    list-style: outside none none;
+    padding: 0;
+}
+.fba-links ul li {
+    display: inline-block;
+    margin-left: 28px;
+}*/
+
+/* #################### Slider #################### */
+.oct-slider h4 {
+    color: #efefef;
+}
+.oct-slider .carousel-caption {
+    background-color: #000000;
+    opacity: 0.6;
+}
+.oct-slider .carousel-description {
+    padding: 0 10px;
+}
+
+/* #################### Website Header #################### */
+.oct-head-bar {
+    background-color: #5a9e25;
+    color: #fafafa;
+    padding: 40px 0;
+}
+.oct-site-logo h1 a,
+.oct-site-logo h2 a,
+.oct-site-logo h1 a:visited,
+.oct-site-logo h2 a:visited {
+    color: #efefef;
+}
+.oct-site-logo h1 a:hover,
+.oct-site-logo h2 a:hover {
+    color: #fafafa;
+}
+.oct-head-bar h1 {
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 40px;
+}
+.oct-head-bar .widget {
+    padding-bottom: 20px;
+    margin: 0;
+}
+.oct-head-bar .widget:last-child {
+    padding-bottom: 0;
+}
+header{
+    position:relative;
+    width:100%;
+}
+.oct-head-bar .oct-social-icons svg * {
+    fill: #fafafa;
+}
+.oct-header-menu {
+    background:#333;
+}
+.oct-site-logo img {
+    max-width: 100%;
+    max-height: 130px;
+    width: auto;
+}
+.oct-head-bar .oct-site-logo {
+    float: left;
+}
+.oct-head-bar .oct-header-widget {
+    float: right;
+}
+/* #################### Website Footer #################### */
+#oct-site-footer a, 
+#oct-site-footer a:visited {
+    color: #efefef;
+}
+#oct-site-footer a:hover,
+#oct-site-footer a:active,
+#oct-site-footer a:focus  {
+    color: #ffffff;
+}
+#oct-site-footer {
+    background-color: #202020;
+    padding: 40px 0;
+    color: #cccccc;
+}
+#oct-copyright {
+    background-color: #181818;
+    color: #cccccc;
+}
+#oct-site-footer .bg-with-black {
+    position: relative;
+}
+#oct-site-footer .oct-social-icons svg * {
+    fill: #cccccc;
+}
+#oct-site-footer .gallery {
+    margin-bottom: 0px;
+}
+#oct-site-footer > img {
+    margin: 0 0 7px;
+}
+#oct-site-footer ul {
+    list-style: outside none none;
+    padding-left: 0;
+    margin-left: 0px;
+}
+#oct-site-footer ul i {
+    padding-right: 10px;
+}
+#oct-site-footer h3 {
+    color: #ffffff;
+    font-weight: 600;
+    letter-spacing: 0;
+    margin: 0 0 20px;
+}
+#oct-site-footer .widget {
+    clear: both;
+    border-bottom: 1px dotted #666;
+    margin: 0 0 20px 0;
+    padding-bottom: 20px;
+}
+#oct-copyright {
+    padding: 10px 0;
+}
+#oct-copyright p {
+    color: #cccccc;
+}
+
+/* #################### WP Calendar Widget #################### */
+#wp-calendar {
+    width: 100%; 
+}
+#wp-calendar caption { 
+    display:none;
+}
+#wp-calendar thead th {
+    padding:0.25rem;
+    text-align: center;
+    background-color: #333;
+    color: #efefef;
+}
+#wp-calendar tbody {
+    color: #aaa;
+}
+#wp-calendar tbody td {
+    background: #f5f5f5;
+    border: 1px solid #fff;
+    text-align: center;
+    padding:0.25rem;
+}
+#wp-calendar tbody td:hover {
+    background: #fff;
+}
+#wp-calendar tbody .pad {
+    background: none;
+}
+#wp-calendar tfoot #next {
+    font-size: 10px;
+    text-transform: uppercase;
+    text-align: right;
+}
+#wp-calendar tfoot #prev {
+    font-size: 10px;
+    text-transform:uppercase; 
+    padding-top: 10px;
+}
+#wp-calendar tbody a,
+#wp-calendar tbody a:active,
+#wp-calendar tbody a:visited {
+    color: #000;
+    text-decoration: underline;
+}
+
+/* #################### Tags #################### */
+.oct-post-tags {
+    padding: 10px 0;
+    margin-top: 50px;
+}
+.oct-post-tags a {
+    border:1px solid #DDD;
+    display:inline-block;
+    color:#717171;
+    background:#FFF;
+    -webkit-box-shadow:0 1px 1px 0 rgba(180,180,180,0.1);
+    box-shadow:0 1px 1px 0 rgba(180,180,180,0.1);
+    -webkit-transition:all .1s ease-in-out;
+    -moz-transition:all .1s ease-in-out;
+    -o-transition:all .1s ease-in-out;
+    -ms-transition:all .1s ease-in-out;
+    transition:all .1s ease-in-out;
+    border-radius:2px;
+    margin:3px 3px 3px 0;
+    padding:3px 6px;
+    font-size: 13px;
+}
+.oct-post-tags a:hover {
+    background-color:#dddddd;
+    text-decoration: none;
+}
+
+/* #################### General Forms & Contact Form #################### */
+.form-submit {
+    text-align: left;
+}
+.contact-section .icon-thumb {
+    margin: 10px auto;
+}
+.contact-section .contact-form-box {
+    margin: 5px auto;
+}
+.contact_info_blocks h2 {
+    visibility: hidden;
+}
+.form-container{
+    clear: both;
+}
+.newsletter-form{
+    margin:30px auto 0;
+    width:514px;
+    max-width:90%;
+}
+.form fieldset{
+    padding:0 17px 26px;
+}
+.form label{
+    margin-bottom: 3px;
+}
+.form .input,
+.form .select,
+select
+{
+    width: 100%;
+    padding: 1px 8px;
+    font-size: 13px;
+    height: 30px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border: 1px solid #BBBBBB;
+    background-color: #ffffff;
+}
+.form textarea.input{
+    min-height:130px;
+    padding-top:4px;
+}
+.form .submit{
+    margin:0px;
+}
+.form .form_message{
+    font-size:16px;
+}
+
+/************* Primary Menu ******************/
+#primary-nav{
+    text-align: right;
+}
+#primary-nav ul{
+    margin:0;
+    padding:0;
+    color:#efefef;
+    float: right;
+}
+#primary-nav ul {
+    list-style: none;
+}
+#primary-nav ul:after,
+#primary-nav ul:before,
+#primary-nav:after,
+#primary-nav:before{
+    display: block;
+    content: '';
+    clear: both;
+}
+#primary-nav > ul > li,
+#primary-nav > div > ul > li{
+    display: block;
+    position: relative;
+    float: left;
+    z-index: 10;
+}
+#primary-nav ul li a{
+    color:#efefef;
+    font-weight: 600;
+    padding:14px 17px;
+    text-align: center;
+    display: block;
+    transition: background-color .2s ease-out,border .2s ease-out,color .2s ease-out;
+}
+#primary-nav ul li.current_page_item>a,
+#primary-nav ul li.current-menu-parent>a,
+#primary-nav ul li.current-menu-item>a,
+#primary-nav ul li:hover > a {
+    color: #fff;
+    background: #00a3ac;
+}
+#primary-nav ul li ul li a{
+    background-color: #000;
+    text-align: left;
+}
+#primary-nav ul li ul li.current_page_item a,
+#primary-nav ul li ul li:hover > a{
+    color: #fff;
+    background: #00a3ac;
+}
+#primary-nav ul li ul{
+    color: #fff;
+    display: none;
+    width:200px;
+}
+#primary-nav ul li ul li{
+    display: list-item;
+    width:100%;
+}
+#primary-nav ul li ul{
+    position: absolute;
+}
+#primary-nav ul li:hover > ul,
+#primary-nav ul li ul:hover{
+    display: block;
+    color: #fff;
+    background: #00a3ac;
+}
+#primary-nav ul li{
+    position: relative;
+}
+#primary-nav ul.sub-menu ul{
+    left:100%;
+    top: 0;
+}
+#primary-nav>a>small {
+    color: #fff;
+    margin: 10px 0;
+    display: inline-block;
+}
+/*!
+ * ############# Custom Navigation Menu #############
+ * https://bootsnipp.com/snippets/yNnqE
+ */
+
+/* Mobile Menu */
+#sticky_menu_wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+}
+body.admin-bar #sticky_menu_wrapper{
+    top:47px;
+}
+#sticky_menu {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 250px;
+    height:100%;
+    padding: 0;
+    transition: all 0.3s ease 0s;
+    z-index: 1;
+    overflow-y: auto;
+}
+#sticky_menu li {
+    list-style: none;
+    position: relative;
+}
+#sticky_menu li > i {
+    position: absolute;
+    height: 42px;
+    width: 43px;
+    background-color: #fff;
+    top: 0;
+    right: 0;
+    border: 1px solid #aaa;
+    background-image: url(../images/close.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    background-size: 22px;
+    /*transition: all 0.3s;*/
+}
+#sticky_menu li.current-menu-ancestor > i,
+#sticky_menu li.expanded > i{
+    transform: rotate(270deg);
+    -webkit-transform: rotate(270deg);
+    -moz-transform: rotate(270deg);
+}
+#sticky_menu li.menu-item-has-children > a {
+    padding-right: 54px !important;
+    word-break: break-all;
+}
+#sticky_menu li > a {
+    display: block;
+    padding: 12px 20px;
+    line-height: 1;
+    color: inherit;
+    font-size: 18px;
+}
+#sticky_menu li.current-menu-item > a{
+    background-color: #000;
+    color:#fff;
+}
+#sticky_menu li > a:hover, #sticky_menu li.current-menu-ancestor > a {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+#sticky_menu li.current-menu-ancestor > .sub-menu {
+    display: block;
+}
+#sticky_menu .sub-menu{
+    padding: 0;
+    display: none;
+    box-shadow: 0 0 9px #ddd inset;
+    -webkit-box-shadow: 0 0 9px #ddd inset;
+}
+
+#sticky_menu .sub-menu li>a {
+    padding: 12px 12px 12px 40px;
+}
+#sticky_menu .sub-menu .sub-menu li>a{
+    padding: 12px 12px 12px 60px;
+}
+
+.menu-toggle {
+    background-image: url(../images/menu.svg);
+    background-repeat: no-repeat;
+    background-color: transparent;
+    background-size: contain;
+    font-size: 0;
+    border: medium none;
+    border-radius: 0;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    height: 28px;
+    margin: 0;
+    padding: 10px 21px;
+    width: 42px;
+    box-shadow: none;
+    outline: none;
+    -moz-outline: none;
+    -webkit-outline: none;
+    cursor: pointer;
+}
+.menu-toggle:hover,
+.menu-toggle:focus{
+    outline: none;
+    -moz-outline: none;
+    -webkit-outline: none;
+}
+#page{
+    transition: all 0.3s ease 0s;
+    -webkit-transition:  all 0.3s ease 0s;
+    background-color: #ECF0F5;
+    position: relative;
+    z-index: 10;
+    width:100%;
+    overflow-x: hidden;
+    min-width:300px;
+}
+#page.shifted{
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    display: block;
+    margin-left: 250px !important;
+    transition: all 0.3s ease 0s;
+    width: 100%;
+}
+/* #################### Social Icons #################### */
+.oct-social-icons ul {
+    margin: 0;
+}
+.oct-social-icons li {
+    float: left;
+    list-style: none;
+    margin-right: 10px;
+}
+.oct-social-icons li:last-child {
+    margin-right: 0;
+}
+.oct-social-icons a:hover svg {
+    opacity: 0.7;
+}
+.oct-social-icons svg {
+    display: block;
+    width: 48px;
+    height: 48px;
+}
+.oct-social-icons svg * {
+    fill: #3e454c;
+}
+
+/**/
+.btn-card {
+    text-align: center;
+    padding: 10px 0;
+}
+.btn-card button {
+    padding: 10px 20px;
+}
+.oct-card small {
+    font-style: italic;
+}
+
+/* ############# Custom Search ############# */
+.searchform input[type=submit]{
+    width:40px;
+    background-color: #333;
+    background-image: url('../images/search-white.png');
+    background-repeat:no-repeat;
+    -webkit-background-size:20px auto;
+    background-size:20px auto;
+    background-position: center center;
+    -webkit-border-radius:0;
+    -moz-border-radius:0;
+    border-radius:0;
+    font-size:0;
+    padding:10px;
+    border:none;
+}
+.searchform:hover input, .searchform input:focus {
+    box-shadow: none;
+}
+.searchform input[type=text]{
+    padding:8px;
+    width:360px;
+    -webkit-border-radius:0;
+    -moz-border-radius:0;
+    border-radius:0;
+    max-width: calc(100% - 50px);
+    border: 1px solid #cccccc;
+
+}
+
+.searchform input[type=submit]:hover{
+    background-color: #444;
+}
+
+.searchform input[type=text],
+.searchform input[type=submit]{
+    height:40px;
+    float: left;
+    display: block;
+}
+.searchform :before,
+.searchform :after{
+    content:'';
+    display: block;
+    clear: both;
+}
+
+.oct-head-bar .searchform{
+}
+.oct-head-bar .searchform input[type=text] {
+    max-width: 248px;
+}
+
+/* Search Form */
+/*.form-main {
+    margin-top: 15px;
+}
+
+.form-input-fields {
+    margin-bottom: 0; 
+}
+
+.section-main {
+    margin-top:40px;
+    background-color: lightgrey;
+    padding: 20px 0;
+}
+.group-icon {
+    background-color:#fff;
+    border:0; 
+}
+.input-search {
+    border:1px solid #fff;
+    box-shadow:none;  
+}
+.form-main .btn-submit {
+    font-size: 15px;
+    border-radius: 0 4px 4px 0;
+}
+.header-search input {
+    border-radius: 0px;
+}
+.header-search input:focus,
+.header-search .btn-submit {
+    box-shadow: none;
+    outline: none;
+    outline-width: 0;
+    border: none;
+}
+
+@media (max-width: 992px) {
+    .pull-left-sm {
+        float: left !important;
+    }
+
+}
+@media (max-width: 767px) {
+    .nofloat-xs {
+        float: none !important;
+    }
+    .btn-submit {
+        margin-top:10px;
+    }
+}*/
+
+/* #################### Main Content Box  ####################### */
+.oct-main-content {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+    padding: 25px;
+    margin-bottom: 30px;
+}
+
+/* #################### Blog Comments & Pagination  ####################### */
+/* Comment Listing */
+.single .form-submit {
+    text-align: left;
+}
+.single .comment-meta {
+    margin-bottom: 1em;
+}
+.single .comment-body  {
+    color: #3e454c;
+    margin-bottom: 2em;
+}
+/* Comment Form */ 
+.oct-main-content .comment-form label {
+    display: block;
+}
+.oct-main-content .comment-form input,
+.oct-main-content .comment-form textarea {
+    border: 1px solid #ced4da;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    width: 500px;
+    max-width: 100%;
+    padding: 6px 12px;
+}
+.oct-main-content .comment-form input {
+    height: 36px;
+}
+.oct-main-content .comment-form .btn {
+    width: initial;
+}
+.oct-main-content .comment-form-cookies-consent input {
+    display: inline-block;
+    height: 15px;
+    width: 15px;
+    padding-left: 0;
+    margin-right: 5px;
+}
+.oct-main-content .comment-form-cookies-consent label {
+    display: inline-block;
+}
+/* Pagination */ 
+.pagination {
+    margin: 10px 0 30px 0;
+}
+.page-numbers,
+a.page-numbers,
+a.page-numbers:visited {
+    background-color: #2C4A58;
+    color: #fff;
+    padding: 6px 12px;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 2px;
+    -webkit-transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, color 0.3s ease-in-out;
+    transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, color 0.3s ease-in-out;
+}
+.prev.page-numbers,
+.prev.page-numbers:visited,
+.next.page-numbers,
+.next.page-numbers:visited
+{
+    background-color: #2C4A58;
+    /*    display: inline-block;*/
+    font-weight: normal;
+    padding: 6px 12px;
+    color: #fff;
+}
+.prev.page-numbers .dashicons,
+.next.page-numbers .dashicons{
+    vertical-align: middle;
+}
+.page-numbers:hover,
+.page-numbers.current,
+.prev.page-numbers:focus,
+.prev.page-numbers:hover,
+.next.page-numbers:focus,
+.next.page-numbers:hover {
+    background-color: #2C4A58;
+    opacity: 0.8;
+    color: #fff;
+}
+.page-numbers:hover {
+    transition: background-color .2s ease-in-out;
+    -webkit-transition: background-color .2s ease-in-out;
+    -moz-transition: background-color .2s ease-in-out;
+}
+/* Previous and Next Posts navigation */
+.post-navigation {
+    border-top: 1px solid #eeeeee;
+    border-bottom: 1px solid #eeeeee;
+    padding: 10px 0;
+    margin: 20px 0;
+}
+.oct-main-content .post-navigation a,
+.oct-main-content .post-navigation a:visited,
+.oct-main-content .post-navigation a:hover {
+    color: #ffffff;
+}
+.post-navigation .nav-previous a {
+    float: left;
+}
+.post-navigation .nav-next a {
+    float: right;
+
+}
+.post-navigation a,
+.post-navigation a:visited{
+    background-color: #2C4A58;
+    display: inline-block;
+    font-weight: normal;
+    padding: 6px 12px;
+    color: #ffffff;
+}
+.post-navigation a:hover {
+    opacity: 0.8;
+    transition: background-color .2s ease-in-out;
+    -webkit-transition: background-color .2s ease-in-out;
+    -moz-transition: background-color .2s ease-in-out;
+}
+.post-navigation:after,
+.post-navigation:before{
+    clear: both;
+    display: block;
+    content: "";
+}
+
+/* ############# Magazine Section ############# */
+/*.magazine-featured-box .oct-post-meta {
+    padding:7px 0;
+}*/
+.magazine-subsection .post-date {
+    font-size: 12px;
+    vertical-align: middle;
+}
+.oct-magazine-subsection-list {
+    padding: 16px 0;
+    border-bottom: 1px solid rgba(0,0,0,.1);
+}
+.page .oct-magazine-subsection-list .oct-featured-media {
+    padding-right:10px;
+    margin-bottom: 0;
+}
+.page .oct-magazine-subsection-list .mejs-controls {
+    display: none;
+}
+article.oct-magazine-subsection-list:first-child {
+    padding-top: 0;
+}
+article.oct-magazine-subsection-list:last-child {
+    padding-bottom: 0;
+    border-bottom: none;
+}
+.oct-magazine-subsection-figure {
+    padding:0;
+}
+.magazine-subsection .dashicons, 
+.magazine-subsection .dashicons-before:before {
+    /* @todo Remore !important in css file */
+    font-size: 14px !important;
+    line-height: 18px !important;
+    width: 14px;
+}
+.oct-magazine-3-featured-box {
+    margin-bottom: 16px;
+}
+.oct-magazine-list-3 figure {
+    padding-right: 10px;
+}
+/* Fix for IE 11 extra space */
+.oct-featured-media, .oct-recent-posts {
+    -ms-flex-negative: 0;
+}
+#booking_form input.oc-captcha-val {
+    width: 50px;
+    height: 30px;
+    vertical-align: middle;
+    border: 0;
+    font-size: 16px;
+    outline: none;
+    text-align: center;
+    border-left: 1px solid #ccc;
+    margin-left: 8px;
+}
+.oc_csrf_token{
+    display: none;
+}
+.oc-cap-container{
+    border: 1px solid #BBBBBB;
+    background-color: white;
+}
+#booking_form input.oc-captcha-val::placeholder {
+    color: #333;
+}
+
+/** WooCommerce layout fixes **/
+.woocommerce .related.products,
+.woocommerce .up-sells {
+    clear: both;
+}
+.woocommerce .quantity input {
+    min-height: 30px;
+}
+.woocommerce ul.products .added_to_cart {
+    margin-left: 5px;
+}
+.woocommerce .related h2 {
+    margin-bottom: 18px;
+}
+.woocommerce div.product div.images .flex-control-thumbs {
+    margin: 1em 0;
+}
+.woocommerce .single-product div.product ol.flex-control-thumbs li {
+    width: 18%;
+    margin-right: 1rem;
+}
+.woocommerce div.product form.cart .variations {
+    margin-bottom: 1em;
+}
+.woocommerce div.product form.cart .variations select {
+    width: initial;
+}
+.woocommerce table.shop_attributes td.woocommerce-product-attributes-item__value {
+    padding-left: 1em;
+}
+.woocommerce div.product form.cart .variations td {
+    padding: 0;
+}
+@media (max-width: 576px) {
+    .woocommerce div.product form.cart .button {
+        width: initial;
+    }
+}
+
+.page .oct-post-content .woocommerce a.button.alt,
+.page .oct-post-content .woocommerce a.button.alt:visited {
+    color: #ffffff;
+}
+/* Fix WooCommerce Checkout Conflict with Bootstrap 4.x issue */
+.woocommerce-billing-fields .form-row,
+.woocommerce-shipping-fields .form-row,
+.woocommerce form .form-row {
+  display: block;
+}
+.woocommerce .col2-set .col-1,
+.woocommerce-page .col2-set .col-1,
+.woocommerce .col2-set .col-2,
+.woocommerce-page .col2-set .col-2 {
+  max-width: unset;
+}
+/** google recaptcha badge visibility  **/
+.grecaptcha-badge {
+    z-index: 999;
+}
+/* Default gallery spacing fix */
+figure.wp-block-gallery {
+	margin: 16px 0;
+}
